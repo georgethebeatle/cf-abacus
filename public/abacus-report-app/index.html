@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Abacus Usage Report</title>
+  <meta charset="UTF-8"/>
+
+  <link rel="icon" type="image/png" href="images/calc.png" sizes="16x16"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="script/jquery.treetable.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+  <script src="script/report.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,300italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300italic,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/jquery.treetable.css" type="text/css"/>
+  <link rel="stylesheet" href="css/jquery.treetable.default.css" type="text/css"/>
+  <link rel="stylesheet" href="css/report.css" type="text/css"/>
+</head>
+
+<body>
+  <div class="report">
+    <p class="title">Abacus usage report</p>
+
+    <p class="error" id="error"></p>
+
+    Organization Id:
+    <input id="org" type="text" class="org"
+           value="911dfc32-b7cc-4916-87ae-b4f84e9eaa66"
+           placeholder="cf org <org name> --guid"/>
+    <button onclick="reloadReport()">Get Report</button>
+
+    <table id="reportTable" class="table"></table>
+
+    <div id="chartContainer" style="height: 300px; width: 100%;" /></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+div.report {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+p.title {
+    font-size: xx-large;
+}
+
+p.error {
+    color: darkred;
+}
+
+input.org {
+    width: 300px;
+}
+
+table.table {
+    font-family: 'Roboto Mono';
+}
