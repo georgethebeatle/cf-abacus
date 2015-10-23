@@ -42,7 +42,7 @@ function reloadTreetable() {
     $table.treetable("removeNode", 0);
 
   $.ajax({
-    url: "http://localhost:9088/v1/metering/organizations/" + orgGuid + "/aggregated/usage",
+    url: "http://abacus-usage-reporting.cfapps.neo.ondemand.com/v1/metering/organizations/" + orgGuid + "/aggregated/usage",
     success: function(result) {
       $table.treetable("loadBranch", null, orgChargeData(orgGuid, result.windows[month][0].charge));
       const spaces = result.spaces;
@@ -87,7 +87,7 @@ function renderChart() {
 
 function plotDailyUsage(date, orgGuid, endOfDay, chart) {
   $.ajax({
-    url: "http://localhost:9088/v1/metering/organizations/" + orgGuid + "/aggregated/usage/" + endOfDay,
+    url: "http://abacus-usage-reporting.cfapps.neo.ondemand.com/v1/metering/organizations/" + orgGuid + "/aggregated/usage/" + endOfDay,
     success: function(result) {
       var charge = result.resources.length > 0 ? result.windows[day][0].charge : 0;
 
